@@ -1,3 +1,4 @@
 FROM centos:6
 
-RUN yum install rpm-build
+RUN yum upgrade -y
+RUN yum install -y rpm-build
