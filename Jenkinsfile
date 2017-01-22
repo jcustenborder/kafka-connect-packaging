@@ -8,7 +8,8 @@ def buildImage(name, directory) {
                 image = docker.build(name)
              }
              stage('publish') {
-                app.push "${env.BUILD_NUMBER}"
+                image.push "${env.BUILD_NUMBER}"
+                image.push "latest"
              }
         }
     }
