@@ -18,12 +18,12 @@ def buildImage(name, directory) {
 parallel 'packaging-centos-6': {
     node {
         checkout scm
-        buildImage('packaging-centos-6', 'docker/packaging-centos-6')
+        buildImage('jcustenborder/packaging-centos-6', 'docker/packaging-centos-6')
     }
 }, 'packaging-centos-7': {
     node {
         checkout scm
-        buildImage('packaging-centos-7', 'docker/packaging-centos-7')
+        buildImage('jcustenborder/packaging-centos-7', 'docker/packaging-centos-7')
     }
 }
 
