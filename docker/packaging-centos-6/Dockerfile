@@ -1,4 +1,5 @@
 FROM centos:6
 
 RUN yum upgrade -y
-RUN yum install -y rpm-build
+RUN yum install -y rpm-build ruby rubygems
+RUN gem install fpm
