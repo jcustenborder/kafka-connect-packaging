@@ -6,6 +6,7 @@ ARG MAVEN_VERSION=3.3.9
 ARG USER_HOME_DIR="/home/jenkins"
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
+ENV JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk
 
 RUN useradd --uid 1000 -m jenkins
 RUN yum upgrade -y
