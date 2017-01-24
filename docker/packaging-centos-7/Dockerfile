@@ -2,6 +2,8 @@ FROM centos:7
 
 MAINTAINER jcustenborder@gmail.com
 
+ARG MAVEN_VERSION=3.3.9
+ARG USER_HOME_DIR="/home/jenkins"
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
