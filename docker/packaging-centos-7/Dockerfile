@@ -7,6 +7,10 @@ ARG USER_HOME_DIR="/home/jenkins"
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 ENV JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+
 
 RUN useradd --uid 1000 -m jenkins
 RUN yum upgrade -y
