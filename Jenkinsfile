@@ -20,5 +20,6 @@ node {
     deleteDir()
     checkout scm
     buildImage('jcustenborder/packaging-centos-7', 'docker/packaging-centos-7')
+    buildImage('jcustenborder/packaging-documentation', 'docker/packaging-documentation')
 }
 
