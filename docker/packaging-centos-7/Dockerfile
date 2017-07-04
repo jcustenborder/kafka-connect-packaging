@@ -14,7 +14,7 @@ ENV LANGUAGE=en_US.UTF-8
 
 RUN useradd --uid 1000 -m jenkins
 RUN yum upgrade -y
-RUN yum install -y rpm-build ruby ruby-devel rubygems java-1.8.0-openjdk-devel
+RUN yum install -y rpm-build ruby ruby-devel rubygems java-1.8.0-openjdk-devel createrepo
 RUN yum groupinstall -y "Development Tools"
 RUN gem install fpm
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
