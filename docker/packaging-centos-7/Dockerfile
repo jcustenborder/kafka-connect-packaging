@@ -1,4 +1,4 @@
-FROM centos/python-35-centos7
+FROM centos:7
 
 MAINTAINER jcustenborder@gmail.com
 
@@ -13,9 +13,16 @@ ENV LANGUAGE=en_US.UTF-8
 
 
 RUN useradd --uid 1000 -m jenkins
-RUN pip install docker-compose --force --upgrade
-RUN yum upgrade -y
-RUN yum install -y rpm-build ruby ruby-devel rubygems java-1.8.0-openjdk-devel createrepo
+ADD docker-ce-stable.repo /etc/yum.repos.d/docker-ce-stable.repo
+RUN yum clean all && yum upgrade -y
+RUN yum install -y \
+    rpm-build \
+    ruby ruby-devel \
+    rubygems \
+    java-1.8.0-openjdk-devel \
+    createrepo \
+    epel-release \
+    docker-compose
 RUN yum groupinstall -y "Development Tools"
 RUN gem install fpm
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
