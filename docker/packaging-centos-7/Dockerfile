@@ -14,6 +14,7 @@ ENV LANGUAGE=en_US.UTF-8
 
 RUN useradd --uid 1000 -m jenkins
 ADD docker-ce-stable.repo /etc/yum.repos.d/docker-ce-stable.repo
+RUN yum install -y epel-release
 RUN yum clean all && yum upgrade -y
 RUN yum install -y \
     rpm-build \
@@ -21,7 +22,6 @@ RUN yum install -y \
     rubygems \
     java-1.8.0-openjdk-devel \
     createrepo \
-    epel-release \
     docker-compose
 RUN yum groupinstall -y "Development Tools"
 RUN gem install fpm
