@@ -22,7 +22,8 @@ RUN yum install -y \
     rubygems \
     java-1.8.0-openjdk-devel \
     createrepo \
-    docker-compose
+    docker-compose \
+    docker-ce
 RUN yum groupinstall -y "Development Tools"
 RUN gem install fpm
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
