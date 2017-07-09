@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos/python-35-centos7
 
 MAINTAINER jcustenborder@gmail.com
 
@@ -13,6 +13,7 @@ ENV LANGUAGE=en_US.UTF-8
 
 
 RUN useradd --uid 1000 -m jenkins
+RUN pip install docker-compose --force --upgrade
 RUN yum upgrade -y
 RUN yum install -y rpm-build ruby ruby-devel rubygems java-1.8.0-openjdk-devel createrepo
 RUN yum groupinstall -y "Development Tools"
