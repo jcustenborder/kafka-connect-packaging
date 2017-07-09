@@ -10,7 +10,7 @@ ENV JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
-
+ENV DOCKER_HOST=/var/run/docker.sock
 
 RUN useradd --uid 1000 -m jenkins
 ADD docker-ce-stable.repo /etc/yum.repos.d/docker-ce-stable.repo
