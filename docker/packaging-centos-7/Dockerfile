@@ -25,7 +25,7 @@ RUN yum install -y \
     docker-compose \
     docker-ce
 RUN yum groupinstall -y "Development Tools"
-RUN gem install fpm
+RUN gem install fpm bundler
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
     | tar -xzC /usr/share/maven --strip-components=1 \
