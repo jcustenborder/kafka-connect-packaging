@@ -23,7 +23,8 @@ RUN yum install -y \
     java-1.8.0-openjdk-devel \
     createrepo \
     docker-compose \
-    docker-ce
+    docker-ce \
+    git
 RUN yum groupinstall -y "Development Tools"
 RUN gem install fpm bundler rake
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
