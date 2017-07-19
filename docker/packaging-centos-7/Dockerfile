@@ -11,7 +11,9 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
 
-RUN useradd --uid 1000 -m jenkins
+RUN groupadd -g 994 docker
+RUN useradd --uid 1000 -m -G docker jenkins
+
 ADD docker-ce-stable.repo /etc/yum.repos.d/docker-ce-stable.repo
 RUN yum install -y epel-release
 RUN yum clean all && yum upgrade -y
