@@ -21,5 +21,6 @@ node {
     checkout scm
     buildImage('jcustenborder/packaging-centos-7', 'docker/packaging-centos-7')
     buildImage('jcustenborder/packaging-documentation', 'docker/packaging-documentation')
+    buildImage('jcustenborder/packaging-ubuntu-17.04', 'docker/packaging-ubuntu-17.04')
 }
 
