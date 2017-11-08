@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER jcustenborder@gmail.com
 
-ARG MAVEN_VERSION=3.5.0
+ARG MAVEN_VERSION=3.5.2
 ARG USER_HOME_DIR="/home/jenkins"
 
 RUN groupadd -g 994 docker
