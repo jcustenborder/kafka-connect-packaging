@@ -21,7 +21,8 @@ RUN yum install -y \
     docker-compose \
     docker-ce \
     git \
-    graphviz
+    graphviz \
+    dpkg-dev
 RUN yum groupinstall -y "Development Tools"
 RUN gem install fpm bundler rake
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
