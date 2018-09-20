@@ -21,5 +21,6 @@ node {
     checkout scm
     buildImage('jcustenborder/packaging-centos-7', 'docker/packaging-centos-7')
     buildImage('jcustenborder/packaging-documentation', 'docker/packaging-documentation')
+    buildImage('jcustenborder/packer-ansible-python', 'docker/packer-ansible-python')
 }
 
