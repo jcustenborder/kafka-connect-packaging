@@ -2,10 +2,9 @@ FROM python:3.7
 
 MAINTAINER jcustenborder@gmail.com
 
-ARG PACKER_URL='https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip'
-ARG VSPHERE_CLONE_URL='https://github.com/jetbrains-infra/packer-builder-vsphere/releases/download/v2.0/packer-builder-vsphere-clone.linux'
-ARG VSPHERE_ISO_URL='https://github.com/jetbrains-infra/packer-builder-vsphere/releases/download/v2.0/packer-builder-vsphere-iso.linux'
-
+ARG PACKER_URL='https://releases.hashicorp.com/packer/1.4.1/packer_1.4.1_linux_amd64.zip'
+ARG VSPHERE_CLONE_URL='https://github.com/jetbrains-infra/packer-builder-vsphere/releases/download/v2.3/packer-builder-vsphere-clone.linux'
+ARG VSPHERE_ISO_URL='https://github.com/jetbrains-infra/packer-builder-vsphere/releases/download/v2.3/packer-builder-vsphere-iso.linux'
 
 RUN useradd --uid 1000 -m jenkins
 RUN pip install ansible
